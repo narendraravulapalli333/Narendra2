@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form method="POST" action="login-land.php">
+Username :<input type="text" name="uname"/>
+Password :<input type="text" name="password"/>
+<input type="submit" value="Submit"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?php
+$con=mysqli_connect("localhost","root","","sample");
+
+$username=$_POST['uname'];
+$password=$_POST['password'];
+
+$sql="INSERT INTO login (username,password) VALUES ('$username','$password')";
+if(mysqli_query($con,$sql))
+	{
+	echo"Successfully Registered";
+	
+	
+}
+else
+{
+	
+	echo"Something went wrong";
+}
+?>
