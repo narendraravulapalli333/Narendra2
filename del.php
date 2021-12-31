@@ -1,0 +1,19 @@
+<?php
+include 'auth.php';
+include 'menu.php';
+
+$slno=$_GET['slno'];
+$con=mysqli_connect("localhost","root","","login",);
+
+$q="DELETE  FROM cards WHERE slno='$slno'";
+if(mysqli_query($con,$q))
+{
+echo"Contact removed successfully";
+}
+else
+{
+echo"Something went wrong";
+}
+
+
+?>

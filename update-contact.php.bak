@@ -1,0 +1,21 @@
+<?php
+include 'auth.php';
+include 'menu.php';
+$slno=$_POST['slno'];
+$name=$_POST['nam'];
+$mobile=$_POST['mobile'];
+$email=$_POST['email'];
+$id=$_SESSION['id'];
+$con=mysqli_connect("localhost","root","","sample");
+$sql="UPDATE  cards SET name='$name',mobile='$mobile',email='$email' WHERE id='$id' AND slno='$slno'";
+
+if(mysqli_query($con,$sql))
+{
+echo " Contact added successfully";
+}
+else
+{
+echo "Something Went wrong";
+}
+
+?>

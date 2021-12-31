@@ -1,0 +1,21 @@
+<?php
+include 'auth.php';
+include 'menu.php';
+
+$id=$_SESSION['id'];
+$con=mysqli_connect("localhost","root","","sample");
+
+$q="SELECT * FROM cards WHERE id='$id'";
+$res=mysqli_query($con,$q);
+
+echo"<table border=1>";
+while($k=mysqli_fetch_assoc($res))
+{
+echo"<tr>";
+echo"<td>".$k['name']."</td>";
+echo"<td>".$k['mobile']."</td>";
+echo"<td>".$k['email']."</td>";
+echo"</tr>";
+}
+
+?>

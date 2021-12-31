@@ -1,0 +1,26 @@
+delete.php
+
+<?php
+include 'auth.php';
+include 'menu.php';
+
+$id=$_SESSION['id'];
+$con=mysqli_connect("localhost","root","","sample");
+
+$q="SELECT * FROM cards WHERE id='$id'";
+$res=mysqli_query($con,$q);
+
+echo"<table border=1>";
+echo"<th>Name</th><th> Mobile</th><th> Email</th>";
+while($k=mysqli_fetch_assoc($res))
+{
+$slno=$k['slno'];
+echo"<tr>";
+echo"<td>".$k['name']."</td>";
+echo"<td>".$k['mobile']."</td>";
+echo"<td>".$k['email']."</td>";
+echo"<td><ahref=\"del.php?slno=$slno\">Delete</a></td>";
+echo"</tr>";
+}
+
+?>

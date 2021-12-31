@@ -1,0 +1,20 @@
+<?php
+include 'auth.php';
+include 'menu.php';
+
+$slno=$_GET['slno'];
+$con=mysqli_connect("localhost","root","","sample");
+
+$q="SELECT * FROM cards WHERE slno='$slno'";
+$res=mysqli_query($con,$q);
+$k=mysqli_fetch_assoc($res);
+?>
+<form method="POST" action="update-contact.php">
+
+<input type="text" placeholder="Enter Name" name="nam" value="<?php echo"".$k['name'];?>" /><br/>
+<input type="text" placeholder="Enter Mobile No." name="mobile" value="<?php echo"".$k['mobile'];?>"/><br/>
+<input type="email" placeholder="Enter Email" name="email" value="<?php echo"".$k['email'];?>"/><br/>
+<input type="Submit" />
+
+
+</form>

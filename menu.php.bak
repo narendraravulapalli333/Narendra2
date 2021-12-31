@@ -1,0 +1,8 @@
+<table class="table"><tr>
+<td><a href="index.php"> Home </a></td>
+<td><a href="add.php"> Add </a></td>
+<td><a href="edit.php"> Edit </a></td>
+<td><a href="delete.php"> Delete </a></td>
+<td><a href="display.php"> Display </a></td>
+<td><a href="logout.php"> Logout </a></td>
+</tr></table>

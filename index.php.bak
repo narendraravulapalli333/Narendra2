@@ -1,0 +1,7 @@
+<?php
+include 'auth.php';
+
+echo" my id is ".$_SESSION['id'];
+
+
+?>
